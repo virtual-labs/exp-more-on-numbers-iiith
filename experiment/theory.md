@@ -1,1 +1,117 @@
-### Link your theory in here
+Problem 1
+
+Lets look at the remainder after with 9 for 10,100,1000,10000 etc. It is equal to 1 in all the cases. It is not difficult of see that for multiples of these numbers, the remainder after division with 9 will only depend on the multiple. So, for 20,40,800,500,7000,2000 etc., the remainder after division with 9 are 2,4,8,5,7 and 2. Now, any number, say N, written as sequence, WXYZ can be expressed as:
+
+N=W*1000*X+100+Y*10+Z
+
+eg: For N=3548
+
+N=3*1000+5*100+4*10+8
+
+
+
+So, clearly the remainder after divison with 9 depends upon remainder after division with 3000, 500, 40 and 8, which are 3, 5, 4, and 8 respectively. Hence, the divisibility test for 9 states that a number is divisible by 9 if the sum digits of the number is divisible by 9. How to check whether sum of the digits is divisible by nine? Keep on doing the same test on the sum until the problem becomes trivial.
+
+So, how do we find the sum of the digits of a number. For this one can repeatedly take mod of the number by 10 and then divide the number by 10, until the number becomes less than 10. For example:
+
+346 gives 6 as the remainder SUM=6
+
+34 gives 4 as the remainder SUM=10
+
+3 gives 3 as remainder SUM=13
+
+
+
+
+Now repeat the same procedure with SUM=13
+
+13 gives 3 as the remainder SUM=3
+
+1 gives 1 as the remainder SUM=4
+
+Now, SUM=4 is not divisible by 9. Hence, 346 is not divisible by 9.
+
+
+
+
+
+Problem 2
+
+Suppose the number we require is say (X[0],X[1],...,X[N]). We dont know what X[0] ,X[1],...X[N-1] are and also the value of N. But fortunately we know some properties about this number with which we can find out what number it is. We know the value of X[N]. Let take the sample input. X[N] = 4 in that case. Say we represent the product as (P[0],P[1],...,P[M]). Now X[N] = 4 and when we multiply it with X[N] we get 16(which is 4*4), which implies P[M]=6.Since the number has to be circular it is obvious that X[N-1] must be 6.Now again multiplying X[N-1] = 6 with X[N]=4 and yea dont forget to add the carry which we obtained in previous step.So P[M-1] = (6*4 + 1)%10 = 5 and carry is 2 this time. So we carry on like this.
+
+Step1: xxxxxx4
+
+*4
+
+------
+
+6 and carry = 1
+
+------
+
+Step2:
+
+xxxxx64
+
+*4
+
+------
+
+56 and carry = 2
+
+------
+
+Step3:
+
+xxxx564
+
+*4
+
+------
+
+256 and carry = 2
+
+------
+
+Step4:
+
+xxx2564
+
+*4
+
+------
+
+0256 and carry = 1
+
+------
+
+Step5:
+
+xx02564
+
+*4
+
+------
+
+10256 and carry = 0
+
+------
+
+Step6:
+
+x102564
+
+*4
+
+------
+
+410256 and carry = 0
+
+------
+
+At step 6, you can observe that the number is exactly the circular number. So we stop doing it. The stopping criteria is simple. The carry must be 0 and the units digit with which we multiply must be same as the last digit generated in the product. Here multiplication digit is 4. Thus the output is 102564.
+
+
+
+
+
