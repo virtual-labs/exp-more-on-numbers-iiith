@@ -1,1 +1,1 @@
-To learn to solve problems related to Number Theory using Computer Programming
+- To learn to solve problems related to Number Theory using Computer Programming
