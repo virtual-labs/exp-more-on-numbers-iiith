@@ -29,9 +29,9 @@ Output: YES
 A whole number is said to be CIRCULAR if, when you multiply the number by its units decimal digit, the result is the number with its decimal digits rotated to the right, where the units digit becoming its high-order digit. For example, 102564 is a circular number because of the multiplication:  
 102564  
 *4  
--------  
+_______  
 410256  
--------  
+_______  
 
 
 
