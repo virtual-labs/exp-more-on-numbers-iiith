@@ -1,1 +1,4 @@
-- To learn to solve problems related to Number Theory using Computer Programming
+- To understand and identify advanced properties of numbers such as divisibility rules, digital roots, and circular numbers.
+- To develop algorithms for testing and exploring number-theoretic properties efficiently using programming.
+- To strengthen analytical and computational thinking by solving challenging number theory problems through code.
+- To appreciate the patterns and logic in numbers by connecting mathematical theory with practical programming tasks.

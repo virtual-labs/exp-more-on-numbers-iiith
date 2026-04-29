@@ -1,74 +1,104 @@
-**Problem 1**
+Numbers are full of fascinating patterns and properties. In this experiment, you will explore advanced number-theoretic ideas that go beyond the basics, using the power of computer programming to solve and understand them. We focus on two main concepts:
 
-Lets look at the remainder after with 9 for 10,100,1000,10000 etc. It is equal to 1 in all the cases. It is not difficult of see that for multiples of these numbers, the remainder after division with 9 will only depend on the multiple. So, for 20,40,800,500,7000,2000 etc., the remainder after division with 9 are 2,4,8,5,7 and 2. Now, any number, say N, written as sequence, WXYZ can be expressed as:  
+1. **Divisibility (with a special look at digital roots)**
+2. **Circular numbers**
 
-N=W*1000*X+100+Y*10+Z  
-eg: For N=3548  
-N=3*1000+5*100+4*10+8  
+---
 
+### 1. Divisibility and Digital Roots
 
-So, clearly the remainder after divison with 9 depends upon remainder after division with 3000, 500, 40 and 8, which are 3, 5, 4, and 8 respectively. Hence, the divisibility test for 9 states that a number is divisible by 9 if the sum digits of the number is divisible by 9. How to check whether sum of the digits is divisible by nine? Keep on doing the same test on the sum until the problem becomes trivial.  
+Divisibility rules help us quickly determine if a number is divisible by another without performing full division. One classic example is the rule for divisibility by 9:
 
-So, how do we find the sum of the digits of a number. For this one can repeatedly take mod of the number by 10 and then divide the number by 10, until the number becomes less than 10. For example:
+> A number is divisible by 9 if the sum of its digits is also divisible by 9.
 
-346 gives 6 as the remainder SUM=6  
-34 gives 4 as the remainder SUM=10  
-3 gives 3 as remainder SUM=13  
+This process can be repeated (finding the "digital root") until a single digit remains.
 
+**Example:**
 
+Suppose you want to check if 9009 is divisible by 9:
 
+\[
+9 + 0 + 0 + 9 = 18 \\
+1 + 8 = 9
+\]
 
-Now repeat the same procedure with SUM=13  
-13 gives 3 as the remainder SUM=3  
-1 gives 1 as the remainder SUM=4  
-Now, SUM=4 is not divisible by 9. Hence, 346 is not divisible by 9.  
+Since the final sum is 9, 9009 is divisible by 9.
 
+This method works for any positive integer and is especially useful for large numbers.
 
+---
 
+### 2. Circular Numbers
 
-**Problem 2**  
+A number is called **circular** if, when you multiply it by its units digit, the result is the same number with its digits rotated right (the units digit moves to the front).
 
-Suppose the number we require is say (X[0],X[1],...,X[N]). We dont know what X[0] ,X[1],...X[N-1] are and also the value of N. But fortunately we know some properties about this number with which we can find out what number it is. We know the value of X[N]. Let take the sample input. X[N] = 4 in that case. Say we represent the product as (P[0],P[1],...,P[M]). Now X[N] = 4 and when we multiply it with X[N] we get 16(which is 4*4), which implies P[M]=6.Since the number has to be circular it is obvious that X[N-1] must be 6.Now again multiplying X[N-1] = 6 with X[N]=4 and yea dont forget to add the carry which we obtained in previous step.So P[M-1] = (6*4 + 1)%10 = 5 and carry is 2 this time. So we carry on like this.
+**Example:**
 
-Step1: xxxxxx4  
-*4  
-------  
-6 and carry = 1  
-------  
-Step2:  
-xxxxx64  
-*4  
-------  
-56 and carry = 2  
-------  
-Step3:  
-xxxx564  
-*4  
-------  
-256 and carry = 2  
-------  
-Step4:  
-xxx2564  
-*4  
-------  
-0256 and carry = 1  
-------  
-Step5:  
-xx02564  
-*4  
-------  
-10256 and carry = 0  
-------  
-Step6:  
-x102564  
-*4  
-------  
-410256 and carry = 0  
-------  
+102564 × 4 = 410256
 
-At step 6, you can observe that the number is exactly the circular number. So we stop doing it. The stopping criteria is simple. The carry must be 0 and the units digit with which we multiply must be same as the last digit generated in the product. Here multiplication digit is 4. Thus the output is 102564.
+Here, multiplying by 4 (the units digit) rotates the digits to the right.
 
+Finding such numbers is a fun challenge and helps you understand deeper patterns in number representations.
 
+---
 
+### Step-by-Step Construction of a Circular Number
 
+Suppose the number we require is represented as $X = (X_0, X_1, ..., X_N)$, where we do not know the values of $X_0, X_1, ..., X_{N-1}$ or $N$, but we know some properties about this number that help us find it. We know the value of $X_N$ (the units digit).
 
+Let's take a sample input: $X_N = 4$. We represent the product as $P = (P_0, P_1, ..., P_M)$. Now $X_N = 4$ and when we multiply it with $X_N$ we get $16$ ($4 \times 4$), which implies $P_M = 6$.
+
+Since the number has to be circular, it is obvious that $X_{N-1}$ must be 6. Now, multiply $X_{N-1} = 6$ with $X_N = 4$ and **add the carry** from the previous step. So $P_{M-1} = (6 \times 4 + 1) \mod 10 = 5$ and the carry is 2 this time. Continue this process:
+
+**Step 1:**
+
+xxxxxx4 × 4
+→ 6 and carry = 1
+
+**Step 2:**
+
+xxxxx64 × 4
+→ 56 and carry = 2
+
+**Step 3:**
+
+xxxx564 × 4
+→ 256 and carry = 2
+
+**Step 4:**
+
+xxx2564 × 4
+→ 0256 and carry = 1
+
+**Step 5:**
+
+xx02564 × 4
+→ 10256 and carry = 0
+
+**Step 6:**
+
+x102564 × 4
+→ 410256 and carry = 0
+
+At step 6, you can observe that the number is exactly the circular number. So we stop here.
+
+**Stopping Criteria:**
+
+- The carry must be 0.
+- The units digit with which we multiply must be the same as the last digit generated in the product.
+
+Here, the multiplication digit is 4. Thus, the output is **102564**.
+
+---
+
+### Why Study More on Numbers?
+
+Exploring these properties helps you:
+
+- Discover elegant shortcuts and tricks in mathematics.
+- Develop efficient algorithms for number-theoretic problems.
+- Connect mathematical ideas with practical programming.
+
+---
+
+_This experiment encourages you to implement algorithms for divisibility and circular numbers, deepening your understanding of number theory and programming._
