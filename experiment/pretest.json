@@ -1,47 +1,175 @@
-[
-{"question":"1. The execution of a loop typically starts with:",
-"answers":{
-            "a":"initialization statements",
-            "b":"Loop body",
-            "c":"test condition",
-            "d":"update statements"
-          },
-"correctAnswer":"a"},
-
-{"question":"2. The break statement is used to exit from:",
-"answers":{
-            "a":"an if statement",
-            "b":"a for loop",
-            "c":"a program",
-            "d":"the main( ) function"
-          },
-"correctAnswer":"b"}, 
-
-{"question":"3. A do-while loop is useful when we want that the statements within the loop must be executed",
-"answers":{
-            "a":"only once",
-            "b":"At Least Once",
-            "c":"More than once",
-            "d":"None of the above"
-          },
-"correctAnswer":"b"},
-
-{"question":"4. In what sequence the initialization, testing and execution of body is done in a do-while loop ",
-"answers":{
-            "a":"Initialization, execution of body, testing",
-            "b":"Execution of body, initialization, testing",
-            "c":"Initialization, testing, execution of body",
-            "d":"None of the above"
-          },
-"correctAnswer":"a"},
-
-{"question":"5. Which looping process checks the test condition at the end of the loop?",
-"answers":{
-            "a":"for",
-            "b":"while",
-            "c":"do-while",
-            "d":"No looping peocess check condition at the end"
-          },
-"correctAnswer":"c"}
-
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which of the following numbers is divisible by 9?",
+      "answers": {
+        "a": "12345",
+        "b": "9009",
+        "c": "12101",
+        "d": "10001"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. 1+2+3+4+5=15, not divisible by 9.",
+        "b": "Correct. 9+0+0+9=18, 1+8=9, so 9009 is divisible by 9.",
+        "c": "Incorrect. 1+2+1+0+1=5, not divisible by 9.",
+        "d": "Incorrect. 1+0+0+0+1=2, not divisible by 9."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. What is the digital root of 9876?",
+      "answers": {
+        "a": "3",
+        "b": "9",
+        "c": "6",
+        "d": "1"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. 9+8+7+6=30, 3+0=3.",
+        "b": "Incorrect. 9 is not the digital root.",
+        "c": "Incorrect. 6 is not the digital root.",
+        "d": "Incorrect. 1 is not the digital root."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which of the following is a property of circular numbers?",
+      "answers": {
+        "a": "Multiplying by the units digit rotates the number's digits right",
+        "b": "They are always prime",
+        "c": "They are always even",
+        "d": "They are always less than 1000"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. This is the definition of a circular number.",
+        "b": "Incorrect. Circular numbers are not always prime.",
+        "c": "Incorrect. Circular numbers can be odd or even.",
+        "d": "Incorrect. Circular numbers can be larger than 1000."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following numbers has a digital root of 9?",
+      "answers": {
+        "a": "123456",
+        "b": "9009",
+        "c": "12101",
+        "d": "10001"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. 1+2+3+4+5+6=21, 2+1=3.",
+        "b": "Correct. 9+0+0+9=18, 1+8=9.",
+        "c": "Incorrect. 1+2+1+0+1=5.",
+        "d": "Incorrect. 1+0+0+0+1=2."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. What is the main use of the digital root in divisibility tests?",
+      "answers": {
+        "a": "To check if a number is prime",
+        "b": "To check if a number is divisible by 9",
+        "c": "To find the largest digit",
+        "d": "To check if a number is even"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Digital root is not used for primality.",
+        "b": "Correct. Digital root helps check divisibility by 9.",
+        "c": "Incorrect. Digital root is not about the largest digit.",
+        "d": "Incorrect. Digital root does not check evenness."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which of the following is NOT a property of circular numbers?",
+      "answers": {
+        "a": "They always end with 0",
+        "b": "Multiplying by the units digit rotates the digits",
+        "c": "They can be multi-digit numbers",
+        "d": "They are rare"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Circular numbers do not always end with 0.",
+        "b": "Incorrect. This is a property of circular numbers.",
+        "c": "Incorrect. Circular numbers can have many digits.",
+        "d": "Incorrect. Circular numbers are indeed rare."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Which of the following numbers is circular when multiplied by its units digit?",
+      "answers": {
+        "a": "12345",
+        "b": "102564",
+        "c": "9009",
+        "d": "12101"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. 12345 is not circular.",
+        "b": "Correct. 102564 × 4 = 410256, which is a right rotation.",
+        "c": "Incorrect. 9009 is not circular.",
+        "d": "Incorrect. 12101 is not circular."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. What is the digital root of 123456?",
+      "answers": {
+        "a": "3",
+        "b": "9",
+        "c": "6",
+        "d": "1"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. 1+2+3+4+5+6=21, 2+1=3.",
+        "b": "Incorrect. 9 is not the digital root.",
+        "c": "Incorrect. 6 is not the digital root.",
+        "d": "Incorrect. 1 is not the digital root."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which of the following statements about divisibility by 9 is true?",
+      "answers": {
+        "a": "A number is divisible by 9 if the sum of its digits is divisible by 9",
+        "b": "A number is divisible by 9 if it ends with 9",
+        "c": "A number is divisible by 9 if it is even",
+        "d": "A number is divisible by 9 if it is prime"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. This is the divisibility rule for 9.",
+        "b": "Incorrect. Ending with 9 is not sufficient.",
+        "c": "Incorrect. Evenness is not related to divisibility by 9.",
+        "d": "Incorrect. Primality is not related to divisibility by 9."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "10. Which of the following is NOT a use of digital roots?",
+      "answers": {
+        "a": "Checking divisibility by 9",
+        "b": "Finding circular numbers",
+        "c": "Number puzzles",
+        "d": "Quick mental math"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Digital roots are used for divisibility by 9.",
+        "b": "Correct. Digital roots are not used to find circular numbers.",
+        "c": "Incorrect. Digital roots are used in puzzles.",
+        "d": "Incorrect. Digital roots are used in mental math."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
