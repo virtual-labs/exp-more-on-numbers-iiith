@@ -1,0 +1,15 @@
+
+/home/runner/work/exp-more-on-numbers-iiith/exp-more-on-numbers-iiith/experiment/simulation/js/main.js
+  10:18  warning  Unnecessary escape character: \"  no-useless-escape
+  10:22  warning  Unnecessary escape character: \"  no-useless-escape
+  39:18  warning  Unnecessary escape character: \"  no-useless-escape
+  39:22  warning  Unnecessary escape character: \"  no-useless-escape
+  64:18  warning  Unnecessary escape character: \"  no-useless-escape
+  64:22  warning  Unnecessary escape character: \"  no-useless-escape
+  71:23  warning  Unnecessary escape character: \"  no-useless-escape
+  71:31  warning  Unnecessary escape character: \"  no-useless-escape
+  73:23  warning  Unnecessary escape character: \"  no-useless-escape
+  73:30  warning  Unnecessary escape character: \"  no-useless-escape
+
+✖ 10 problems (0 errors, 10 warnings)
+

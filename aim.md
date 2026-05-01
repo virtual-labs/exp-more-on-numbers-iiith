@@ -1,0 +1,1 @@
+To explore and understand advanced properties and patterns of numbers through computational problem solving, focusing on divisibility, digital roots, circular numbers, and other intriguing number-theoretic concepts using programming techniques.
